@@ -11,6 +11,7 @@ Activity holds a container layout in order to manage fragments which will be con
 
 # Tech Stack 👩🏽‍💻
 ➠ Kotlin
+
 ➠Room Database - For local storage
 
 
