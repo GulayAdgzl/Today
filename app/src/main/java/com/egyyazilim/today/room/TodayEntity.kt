@@ -3,6 +3,7 @@ package com.egyyazilim.today.room
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 import java.util.*
 
 @Entity(tableName = "today_app")
@@ -15,4 +16,4 @@ data class TodayEntity (
     @ColumnInfo(name = "today_com")
     var todayCom:String
 
-)
+):Serializable

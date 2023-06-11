@@ -14,7 +14,7 @@
             android:id="@+id/action_anasayfaFragment_to_todayGuncelleFragment"
             app:destination="@id/todayGuncelleFragment" />
         <action
-            android:id="@+id/action_anasayfaFragment_to_todayEkleFragment"
+            android:id="@+id/anasayfaTotodayEkleFragment"
             app:destination="@id/todayEkleFragment" />
     </fragment>
     <fragment
