@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mobile_nav_graf">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_nav_graf"
+    app:startDestination="@id/anasayfaFragment">
 
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.egyyazilim.today.ui.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_todayGuncelleFragment"
+            app:destination="@id/todayGuncelleFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_todayEkleFragment"
+            app:destination="@id/todayEkleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayGuncelleFragment"
+        android:name="com.egyyazilim.today.ui.TodayGuncelleFragment"
+        android:label="fragment_today_guncelle"
+        tools:layout="@layout/fragment_today_guncelle" >
+        <action
+            android:id="@+id/action_todayGuncelleFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayEkleFragment"
+        android:name="com.egyyazilim.today.ui.TodayEkleFragment"
+        android:label="fragment_today_ekle"
+        tools:layout="@layout/fragment_today_ekle" >
+        <action
+            android:id="@+id/action_todayEkleFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
 </navigation>
