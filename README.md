@@ -14,4 +14,6 @@ Activity holds a container layout in order to manage fragments which will be con
 
 ➠Room Database - For local storage
 
+➠ Coroutines
+
 
