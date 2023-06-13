@@ -16,4 +16,7 @@ Activity holds a container layout in order to manage fragments which will be con
 
 ➠ Coroutines
 
+➠ View Binding
+
+➠ Data Binding
 
