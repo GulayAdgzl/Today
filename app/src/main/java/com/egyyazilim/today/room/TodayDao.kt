@@ -1,10 +1,12 @@
 package com.egyyazilim.today.room
 
 import androidx.room.*
+import java.util.*
 
 @Dao
 interface TodayDao {
-
+    @Query("SELECT * FROM today WHERE timestamp BETWEEN:startDate AND :endDate")
+    fun fetchBy(startDate: Date, endDate: Date): List<TodayEntity>
     @Insert
     fun todayEkle(today:TodayEntity)
 
