@@ -30,6 +30,12 @@ class TodayViewModel (val db:TodayDao,application: Application):AndroidViewModel
             db.todayEkle(today)
         }
     }
+    fun guncelleToday(today: TodayEntity) {
+        viewModelScope.launch {
+            db.todayGuncelle(today)
+        }
+    }
+
     fun silToday(today:TodayEntity){
         viewModelScope.launch {
             db.todaySil(today)

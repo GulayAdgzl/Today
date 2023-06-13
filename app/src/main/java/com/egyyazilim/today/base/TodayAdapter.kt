@@ -29,12 +29,14 @@ RecyclerView.Adapter<TodayAdapter.CardHolder>() {
             itemCard.setOnClickListener { button ->
                 today?.let {
                     //Burda kaldım
-                    val anasayfaToDetay= Anasa
-                        //AnasayfaFragmentDirections.anasayfaToGuncelle(urun)
+                    val anasayfaToDetay=
+                        AnasayfaFragmentDirections.anasayfaToGuncelle(urun)
                     Navigation.findNavController(button).navigate(anasayfaToDetay)
                 }
             }
         }
     }
+
+    override fun getItemCount() = todayList.size
 
 }

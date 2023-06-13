@@ -36,7 +36,7 @@
         android:label="fragment_today_guncelle"
         tools:layout="@layout/fragment_today_guncelle" >
         <action
-            android:id="@+id/action_todayGuncelleFragment_to_anasayfaFragment"
+            android:id="@+id/GuncelleToAnasayfa"
             app:destination="@id/anasayfaFragment"
             app:popUpTo="@id/anasayfaFragment"
             app:popUpToInclusive="true"/>

@@ -12,10 +12,8 @@ import com.egyyazilim.today.databinding.FragmentTodayEkleBinding
 import androidx.databinding.DataBindingUtil
 import com.egyyazilim.today.room.TodayDatabase
 import com.egyyazilim.today.room.TodayEntity
-import com.egyyazilim.today.utils.extensions.toFormat
 import com.egyyazilim.today.viewModel.TodayViewModel
 import com.egyyazilim.today.viewModel.TodayViewModelFactory
-import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 const val CURRENT_DATE_FORMAT="dd MMM yyyy"
@@ -31,7 +29,7 @@ class TodayEkleFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding=inflater.inflate(R.layout.fragment_today_ekle,container,false)
+        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_today_ekle,container,false)
 
         val application= requireNotNull(this.activity).application
         val dataSource=TodayDatabase.getTodayDatabase(application)?.todayDao
@@ -54,15 +52,16 @@ class TodayEkleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        todayViewModel.fetchDate(selectedDate)
+
 
         binding.apply {
             btnEkle.setOnClickListener {
                 val todayCom=ediTextToday.text.toString()
-
+                val todayDate=editSelectDate.text.toString()
                 todayViewModel.ekletoday(
                     TodayEntity(
                         todayCom = todayCom,
+                        todayDate = todayDate
                     )
                 )
                 findNavController().navigate(R.id.todayEkleToAnasayfa)
@@ -70,25 +69,6 @@ class TodayEkleFragment : Fragment() {
 
         }
     }
-    private fun initViews()= with(binding){
-        btnSelectDate.setOnClickListener {
-            val datePicker = MaterialDatePicker.Builder.datePicker()
-                .setTitleText(getString(R.string.select_date))
-                .setSelection(selectedDate.time)
-                .build()
-            datePicker.addOnPositiveButtonClickListener { timestamp ->
-                fetchDate(Date(timestamp))
-            }
-        }
-    }
 
-    private fun fetchDate(date: Date) {
-        selectedDate=date
-        binding.btnSelectDate.text=selectedDate.toFormat(CURRENT_DATE_FORMAT)
-            //.toFormat(CURRENT_DATE_FORMAT)
-        todayViewModel.fetchDate(selectedDate)
-
-
-    }
 
 }

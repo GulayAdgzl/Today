@@ -9,8 +9,8 @@
         android:layout_height="match_parent"
         tools:context=".ui.TodayEkleFragment">
 
-        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-            android:id="@+id/btnSelectDate"
+        <EditText
+            android:id="@+id/editSelectDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select Date"
@@ -23,14 +23,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
+            android:layout_marginBottom="576dp"
             android:hint="Today..."
             android:inputType="number"
             android:textColorHint="@color/black"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintHorizontal_bias="0.553"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSelectDate" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectGuncelDate" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEkle"
