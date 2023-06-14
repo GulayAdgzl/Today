@@ -17,10 +17,15 @@ Activity holds a container layout in order to manage fragments which will be con
 ➠ Coroutines
 
 ➠ Android JetPack
+
    ●LiveData
+   
    ●Lifecycle
+   
    ●ViewModel
+   
    ●View Binding
+   
    ●DataBinding
 
 ➠ Navigation Component
