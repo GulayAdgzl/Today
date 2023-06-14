@@ -3,6 +3,7 @@
 If you want to write down your feelings or thoughts today, your digital notebook is with you.
 
 # Screenshots 📷
+![Mavi Dekoratif Telefon Mockup Emlak Instagram Gönderisi](https://github.com/GulayAdgzl/Today/assets/44726684/99b86a2c-2f1b-476d-be1c-870b2e7ade8e)
 
 
 
