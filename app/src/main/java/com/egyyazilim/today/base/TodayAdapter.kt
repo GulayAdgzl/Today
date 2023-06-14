@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.egyyazilim.today.databinding.FragmentAnasayfaBinding
 import com.egyyazilim.today.databinding.ItemCardBinding
 import com.egyyazilim.today.room.TodayEntity
+import com.egyyazilim.today.ui.AnasayfaFragmentDirections
 
 class TodayAdapter(private var todayList: List<TodayEntity?>):
 RecyclerView.Adapter<TodayAdapter.CardHolder>() {
@@ -28,9 +28,9 @@ RecyclerView.Adapter<TodayAdapter.CardHolder>() {
             }
             itemCard.setOnClickListener { button ->
                 today?.let {
-                    //Burda kaldım
-                    val anasayfaToDetay=
-                        AnasayfaFragmentDirections.anasayfaToGuncelle(urun)
+
+                    val anasayfaToDetay= AnasayfaFragmentDirections.anasayfaToTodayGuncelle(today)
+
                     Navigation.findNavController(button).navigate(anasayfaToDetay)
                 }
             }

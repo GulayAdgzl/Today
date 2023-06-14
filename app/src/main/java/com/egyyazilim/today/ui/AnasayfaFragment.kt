@@ -63,17 +63,19 @@ class AnasayfaFragment : Fragment() {
         tumTodayGoster()
         binding.apply {
             buttonYeniUrun.setOnClickListener {
-                findNavController().navigate(R.id.anasayfaTotodayEkleFragment)
+                findNavController().navigate(R.id.anasayfaToTodayEkle)
             } } }
     fun tumTodayGoster(){
-        binding.apply {
-            if(todayList.isEmpty()){
-                Snackbar.make(requireView(),"Today Bulunamadı",1000).show()
-            }else{
-                val todayAdapter= TodayAdapter(todayList)
-                rvToday.adapter=todayAdapter
-                rvToday.layoutManager=GridLayoutManager(context,2)
-                rvToday.setHasFixedSize(true)
+        todayViewModel.todayList.observe(viewLifecycleOwner) { todaysList ->
+            todayList = todaysList
+
+            binding.apply {
+                if (todayList.isEmpty()) {
+                    Snackbar.make(requireView(), "Today Bulunamadı", 1000).show()
+                } else {
+                    rvToday.layoutManager = GridLayoutManager(context, 2)
+                    rvToday.setHasFixedSize(true)
+                }
             }
         }
     }

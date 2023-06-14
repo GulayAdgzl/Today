@@ -11,12 +11,11 @@
         android:label="fragment_anasayfa"
         tools:layout="@layout/fragment_anasayfa" >
         <action
-            android:id="@+id/anasayfaTotodayEkleFragment"
+            android:id="@+id/anasayfaToTodayEkle"
             app:destination="@id/todayEkleFragment" />
         <action
-            android:id="@+id/anasayfaToGuncelle"
+            android:id="@+id/anasayfaToTodayGuncelle"
             app:destination="@id/todayGuncelleFragment" />
-
     </fragment>
 
     <fragment
@@ -28,7 +27,8 @@
             android:id="@+id/todayEkleToAnasayfa"
             app:destination="@id/anasayfaFragment"
             app:popUpTo="@id/anasayfaFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/todayGuncelleFragment"
@@ -36,11 +36,12 @@
         android:label="fragment_today_guncelle"
         tools:layout="@layout/fragment_today_guncelle" >
         <action
-            android:id="@+id/GuncelleToAnasayfa"
+            android:id="@+id/guncelleToAnasayfa"
             app:destination="@id/anasayfaFragment"
             app:popUpTo="@id/anasayfaFragment"
             app:popUpToInclusive="true"/>
-        <argument android:name="today"
+        <argument
+            android:name="today"
             app:argType="com.egyyazilim.today.room.TodayEntity"
             />
     </fragment>

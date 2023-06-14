@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.egyyazilim.today.R
@@ -31,7 +30,7 @@ class TodayGuncelleFragment : Fragment() {
     ): View? {
         binding= DataBindingUtil.inflate(inflater,R.layout.fragment_today_guncelle,container,false)
 
-        val bundle:TodayGuncelleFragmentArgs by navArgs()
+        val bundle: TodayGuncelleFragmentArgs by navArgs()
         today=bundle.today
 
         val application= requireNotNull(this.activity).application
@@ -72,12 +71,12 @@ class TodayGuncelleFragment : Fragment() {
 
                 todayViewModel.guncelleToday(today)
 
-                findNavController().navigate(R.id.GuncelleToAnasayfa)
+                findNavController().navigate(R.id.guncelleToAnasayfa)
             }
             btnSil.setOnClickListener {
                 todayViewModel.silToday(today)
 
-                findNavController().navigate(R.id.GuncelleToAnasayfa)
+                findNavController().navigate(R.id.guncelleToAnasayfa)
             }
 
         }

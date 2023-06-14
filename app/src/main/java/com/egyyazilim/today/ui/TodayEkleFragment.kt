@@ -14,13 +14,11 @@ import com.egyyazilim.today.room.TodayDatabase
 import com.egyyazilim.today.room.TodayEntity
 import com.egyyazilim.today.viewModel.TodayViewModel
 import com.egyyazilim.today.viewModel.TodayViewModelFactory
-import java.util.*
 
-const val CURRENT_DATE_FORMAT="dd MMM yyyy"
-const val TAG_DATE_PICKER="Tag_Date_Picker"
+
+
 
 class TodayEkleFragment : Fragment() {
-    private var selectedDate= Date()
     private lateinit var binding:FragmentTodayEkleBinding
     private lateinit var todayDB:TodayDatabase
     private lateinit var todayViewModel: TodayViewModel
