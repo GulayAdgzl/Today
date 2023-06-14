@@ -4,7 +4,6 @@ If you want to write down your feelings or thoughts today, your digital notebook
 
 # Screenshots 📷
 
-![ansayfa](https://github.com/GulayAdgzl/Today/assets/44726684/44c4c75d-c319-4a58-8458-74f98c4781f3)
 
 
 
