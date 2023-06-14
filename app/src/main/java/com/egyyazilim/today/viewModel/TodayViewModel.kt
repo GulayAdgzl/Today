@@ -41,13 +41,5 @@ class TodayViewModel (val db:TodayDao,application: Application):AndroidViewModel
             db.todaySil(today)
         }
     }
-    fun fetchDate(date: Date) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val waterList = db.fetchBy(
-                startDate = date.startOfDay(),
-                endDate = date.endOfDay()
-            )
 
-        }
-    }
 }
