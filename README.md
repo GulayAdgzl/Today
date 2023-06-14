@@ -33,4 +33,5 @@ Activity holds a container layout in order to manage fragments which will be con
 
 ➠ Navigation Component
 
-# Developed By
+# Developed By 😎
+https://www.linkedin.com/in/g%C3%BClay-ad%C4%B1g%C3%BCzel/
