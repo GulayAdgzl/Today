@@ -3,4 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_date">Select date</string>
+    <string name="Today">Today...</string>
+    <string name="btn_gunEkle">Gün Ekle</string>
+    <string name="btn_gunGuncelle">Güncelle</string>
+    <string name="btn_sil">Sil</string>
+    <string name="tarih">Tarih</string>
 </resources>

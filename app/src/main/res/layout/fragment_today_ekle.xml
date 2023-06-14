@@ -13,7 +13,7 @@
             android:id="@+id/editSelectDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Date"
+            android:hint="@string/select_date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
             android:layout_marginBottom="576dp"
-            android:hint="Today..."
+            android:hint="@string/Today"
             android:inputType="number"
             android:textColorHint="@color/black"
             android:textSize="24sp"
@@ -32,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.553"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSelectGuncelDate" />
+           />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEkle"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="254dp"
             android:layout_marginEnd="144dp"
-            android:text="Gün Ekle"
+            android:text="@string/btn_gunEkle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

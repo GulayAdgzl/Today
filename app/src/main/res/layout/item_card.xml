@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tarih"
+                    android:text="@string/tarih"
                     android:textSize="30sp"
                     android:id="@+id/textViewTarih"
                     android:padding="25dp"
@@ -47,11 +47,11 @@
 
                 <TextView
                     android:id="@+id/textViewYazi"
-                    android:layout_width="776dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="258dp"
+                    android:layout_height="119dp"
                     android:layout_alignParentRight="true"
                     android:padding="25dp"
-                    android:text="Text"
+                    android:text=""
                     android:textSize="30sp"
                     android:textStyle="italic"
 
